@@ -71,40 +71,38 @@ namespace WindowsFormsApp2
 
         }
 
-        private void metroTile1_Click_1(object sender, EventArgs e)
+        private void SalvareInBaza_Click(object sender, EventArgs e)
         {
-            // sablon creare butoane meniu principal
-            // adaugare  id tag
-            PanelRibbon1.ColumnCount +=1;
-            MetroFramework.Controls.MetroTile Altadenumire;
-            Altadenumire = new MetroFramework.Controls.MetroTile();
-            // ProprietariTile
-            // 
-           // Altadenumire.Location = new System.Drawing.Point(3, 2);
-            Altadenumire.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            Altadenumire.Size = new System.Drawing.Size(146, 113);
-            Altadenumire.TabIndex =2;
-            Altadenumire.Name = "Altadenumire" + Altadenumire.TabIndex;
-            Altadenumire.Text = Altadenumire.Name;
-            Altadenumire.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            PanelRibbon1.Controls.Add(Altadenumire, 0, 0);
-            //Altadenumire.Click += new System.EventHandler(DupaLogare_ClickPrincipal() );
-            // 
-           // Altadenumire.Location = new System.Drawing.Point(3, 2);
-            Altadenumire.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            Altadenumire.Size = new System.Drawing.Size(146, 113);
-            Altadenumire.TabIndex += 1;
-            Altadenumire.Name = "Altadenumire" + Altadenumire.TabIndex;
-            Altadenumire.Text = Altadenumire.Name;
-            Altadenumire.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            PanelRibbon1.Controls.Add(Altadenumire, 0, 0);
-           // Altadenumire.Click += new System.EventHandler(DupaLogare_ClickPrincipal());
-        }
+           try
+            {
+                tabelUtilizatoriBindingSource.EndEdit();
+                tabel_UtilizatoriTableAdapter.Update(this.proba_transareDataSet);
+                while (BaraProgresSalvare.Value < 100)
+                {
+                   // BaraProgresSalvare.Step = 10;
+                    BaraProgresSalvare.Increment(10);
+                }
+                if (BaraProgresSalvare.Maximum == 100)
+                {
+                    MessageBox.Show("Ai inserat in baza de date");
+                }
 
-        private EventHandler DupaLogare_ClickPrincipal()
-        {
-            MessageBox.Show("M-ai apasat");
-           throw new NotImplementedException();
+            }
+
+            catch(Exception)
+            {
+                while (BaraProgresSalvare.Value < 100)
+                {
+                   // BaraProgresSalvare.Step = 10;
+                    BaraProgresSalvare.Increment(10);
+                }
+                if (BaraProgresSalvare.Value == 100)
+                {
+                    MessageBox.Show("Eroare conexiune internet");
+                   
+                }
+                
+            }
         }
     }
 }

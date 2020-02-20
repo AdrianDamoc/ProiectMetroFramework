@@ -431,8 +431,7 @@ namespace WindowsFormsApp2 {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnuser_id}, true));
                 this.columnuser_id.AutoIncrement = true;
-                this.columnuser_id.AutoIncrementSeed = -1;
-                this.columnuser_id.AutoIncrementStep = -1;
+                this.columnuser_id.AutoIncrementSeed = 1;
                 this.columnuser_id.AllowDBNull = false;
                 this.columnuser_id.ReadOnly = true;
                 this.columnuser_id.Unique = true;

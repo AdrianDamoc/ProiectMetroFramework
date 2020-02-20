@@ -41,20 +41,23 @@
             this.Proprietari = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.utilizatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabelUtilizatoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proba_transareDataSet = new WindowsFormsApp2.proba_transareDataSet();
             this.PanelLateralPropr = new System.Windows.Forms.Panel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.tabel_UtilizatoriTableAdapter = new WindowsFormsApp2.proba_transareDataSetTableAdapters.Tabel_UtilizatoriTableAdapter();
             this.proba_transareDataSet1 = new WindowsFormsApp2.proba_transareDataSet1();
             this.tIPURIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tIPURITableAdapter = new WindowsFormsApp2.proba_transareDataSet1TableAdapters.TIPURITableAdapter();
             this.proba_transareDataSet2 = new WindowsFormsApp2.proba_transareDataSet2();
             this.andarticoleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.and_articoleTableAdapter = new WindowsFormsApp2.proba_transareDataSet2TableAdapters.and_articoleTableAdapter();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.utilizatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parolaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabelUtilizatoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proba_transareDataSet = new WindowsFormsApp2.proba_transareDataSet();
+            this.tabel_UtilizatoriTableAdapter = new WindowsFormsApp2.proba_transareDataSetTableAdapters.Tabel_UtilizatoriTableAdapter();
+            this.SalvareInBaza = new MetroFramework.Controls.MetroTile();
+            this.BaraProgresSalvare = new System.Windows.Forms.ProgressBar();
             this.PanelRibbon1.SuspendLayout();
             this.PanelContainerRibbon1.SuspendLayout();
             this.PanelRibbon2.SuspendLayout();
@@ -62,13 +65,13 @@
             this.Proprietari.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelUtilizatoriBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet)).BeginInit();
             this.PanelLateralPropr.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tIPURIBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.andarticoleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelUtilizatoriBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // ProprietariTile
@@ -86,7 +89,7 @@
             // 
             this.PanelRibbon1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelRibbon1.ColumnCount = 5;
+            this.PanelRibbon1.ColumnCount = 10;
             this.PanelRibbon1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.PanelRibbon1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.PanelRibbon1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -97,19 +100,21 @@
             this.PanelRibbon1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.PanelRibbon1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.PanelRibbon1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.PanelRibbon1.Controls.Add(this.metroTile1, 1, 0);
             this.PanelRibbon1.Controls.Add(this.ProprietariTile, 0, 0);
-            this.PanelRibbon1.Controls.Add(this.MaimulteRibbon, 4, 0);
+            this.PanelRibbon1.Controls.Add(this.metroTile2, 2, 0);
+            this.PanelRibbon1.Controls.Add(this.MaimulteRibbon, 9, 0);
             this.PanelRibbon1.Location = new System.Drawing.Point(4, 4);
             this.PanelRibbon1.Margin = new System.Windows.Forms.Padding(4);
             this.PanelRibbon1.Name = "PanelRibbon1";
             this.PanelRibbon1.RowCount = 1;
             this.PanelRibbon1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PanelRibbon1.Size = new System.Drawing.Size(1529, 118);
+            this.PanelRibbon1.Size = new System.Drawing.Size(1523, 118);
             this.PanelRibbon1.TabIndex = 4;
             // 
             // MaimulteRibbon
             // 
-            this.MaimulteRibbon.Location = new System.Drawing.Point(1223, 2);
+            this.MaimulteRibbon.Location = new System.Drawing.Point(1371, 2);
             this.MaimulteRibbon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaimulteRibbon.Name = "MaimulteRibbon";
             this.MaimulteRibbon.Size = new System.Drawing.Size(146, 113);
@@ -211,6 +216,8 @@
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.BaraProgresSalvare);
+            this.metroTabPage1.Controls.Add(this.SalvareInBaza);
             this.metroTabPage1.Controls.Add(this.dataGridView1);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
@@ -235,55 +242,19 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1189, 601);
+            this.dataGridView1.Size = new System.Drawing.Size(1189, 564);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // utilizatorDataGridViewTextBoxColumn
-            // 
-            this.utilizatorDataGridViewTextBoxColumn.DataPropertyName = "utilizator";
-            this.utilizatorDataGridViewTextBoxColumn.HeaderText = "utilizator";
-            this.utilizatorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.utilizatorDataGridViewTextBoxColumn.Name = "utilizatorDataGridViewTextBoxColumn";
-            this.utilizatorDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // parolaDataGridViewTextBoxColumn
-            // 
-            this.parolaDataGridViewTextBoxColumn.DataPropertyName = "parola";
-            this.parolaDataGridViewTextBoxColumn.HeaderText = "parola";
-            this.parolaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.parolaDataGridViewTextBoxColumn.Name = "parolaDataGridViewTextBoxColumn";
-            this.parolaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tabelUtilizatoriBindingSource
-            // 
-            this.tabelUtilizatoriBindingSource.DataMember = "Tabel_Utilizatori";
-            this.tabelUtilizatoriBindingSource.DataSource = this.proba_transareDataSet;
-            // 
-            // proba_transareDataSet
-            // 
-            this.proba_transareDataSet.DataSetName = "proba_transareDataSet";
-            this.proba_transareDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // PanelLateralPropr
             // 
             this.PanelLateralPropr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.PanelLateralPropr.BackColor = System.Drawing.Color.Gray;
-            this.PanelLateralPropr.Controls.Add(this.metroTile1);
             this.PanelLateralPropr.Controls.Add(this.checkBox1);
             this.PanelLateralPropr.Location = new System.Drawing.Point(11, 166);
             this.PanelLateralPropr.Name = "PanelLateralPropr";
             this.PanelLateralPropr.Size = new System.Drawing.Size(303, 665);
             this.PanelLateralPropr.TabIndex = 9;
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.Location = new System.Drawing.Point(43, 196);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(146, 64);
-            this.metroTile1.TabIndex = 3;
-            this.metroTile1.Text = "metroTile1";
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
             // 
             // checkBox1
             // 
@@ -294,10 +265,6 @@
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // tabel_UtilizatoriTableAdapter
-            // 
-            this.tabel_UtilizatoriTableAdapter.ClearBeforeFill = true;
             // 
             // proba_transareDataSet1
             // 
@@ -327,6 +294,71 @@
             // 
             this.and_articoleTableAdapter.ClearBeforeFill = true;
             // 
+            // metroTile1
+            // 
+            this.metroTile1.Location = new System.Drawing.Point(155, 3);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(146, 112);
+            this.metroTile1.TabIndex = 10;
+            this.metroTile1.Text = "metroTile1";
+            // 
+            // metroTile2
+            // 
+            this.metroTile2.Location = new System.Drawing.Point(307, 3);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(146, 112);
+            this.metroTile2.TabIndex = 11;
+            this.metroTile2.Text = "metroTile2";
+            // 
+            // utilizatorDataGridViewTextBoxColumn
+            // 
+            this.utilizatorDataGridViewTextBoxColumn.DataPropertyName = "utilizator";
+            this.utilizatorDataGridViewTextBoxColumn.HeaderText = "utilizator";
+            this.utilizatorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.utilizatorDataGridViewTextBoxColumn.Name = "utilizatorDataGridViewTextBoxColumn";
+            this.utilizatorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // parolaDataGridViewTextBoxColumn
+            // 
+            this.parolaDataGridViewTextBoxColumn.DataPropertyName = "parola";
+            this.parolaDataGridViewTextBoxColumn.HeaderText = "parola";
+            this.parolaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.parolaDataGridViewTextBoxColumn.Name = "parolaDataGridViewTextBoxColumn";
+            this.parolaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tabelUtilizatoriBindingSource
+            // 
+            this.tabelUtilizatoriBindingSource.DataMember = "Tabel_Utilizatori";
+            this.tabelUtilizatoriBindingSource.DataSource = this.proba_transareDataSet;
+            // 
+            // proba_transareDataSet
+            // 
+            this.proba_transareDataSet.DataSetName = "proba_transareDataSet";
+            this.proba_transareDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabel_UtilizatoriTableAdapter
+            // 
+            this.tabel_UtilizatoriTableAdapter.ClearBeforeFill = true;
+            // 
+            // SalvareInBaza
+            // 
+            this.SalvareInBaza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SalvareInBaza.Location = new System.Drawing.Point(1042, 578);
+            this.SalvareInBaza.Name = "SalvareInBaza";
+            this.SalvareInBaza.Size = new System.Drawing.Size(149, 41);
+            this.SalvareInBaza.TabIndex = 3;
+            this.SalvareInBaza.Text = "Salvare";
+            this.SalvareInBaza.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SalvareInBaza.Click += new System.EventHandler(this.SalvareInBaza_Click);
+            // 
+            // BaraProgresSalvare
+            // 
+            this.BaraProgresSalvare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BaraProgresSalvare.Location = new System.Drawing.Point(878, 585);
+            this.BaraProgresSalvare.Name = "BaraProgresSalvare";
+            this.BaraProgresSalvare.Size = new System.Drawing.Size(138, 23);
+            this.BaraProgresSalvare.TabIndex = 4;
+            // 
             // DupaLogare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -348,14 +380,14 @@
             this.Proprietari.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelUtilizatoriBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet)).EndInit();
             this.PanelLateralPropr.ResumeLayout(false);
             this.PanelLateralPropr.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tIPURIBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.andarticoleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelUtilizatoriBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proba_transareDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,5 +419,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn utilizatorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn parolaDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile SalvareInBaza;
+        private System.Windows.Forms.ProgressBar BaraProgresSalvare;
     }
 }
